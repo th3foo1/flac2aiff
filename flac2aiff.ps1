@@ -9,7 +9,7 @@ if (!(Test-Path -Path $outputDir)) {
 # Get the flac files in the input directory
 Get-ChildItem -Path $inputDir -Filter *.flac | ForEach-Object {
     $inputFile = Join-Path -Path $inputDir -ChildPath $_.name
-    $inputFile
+
     # Make the output file the same name as flac but with .aiff file name
     $outputFile = Join-Path -Path $outputDir -ChildPath ($_.BaseName + ".aiff")
     
